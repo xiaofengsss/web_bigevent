@@ -16,7 +16,7 @@ $(function () {
     // 从 layui 中获取 form 对象
     //  因为我们导入了layui的js，所以我们可以用layui对象中的form属性。
     var form = layui.form;
-    // 通过 form.verify() 函数自定义校验规则
+    // 通过 form.verify() 函数自定义校验规则  【verify 是layui内置验证规则】
     form.verify({
 
         // 把 username 名称像pwd复制到html结构中的input标签里面的lay-verify属性中就可以有用了 
@@ -90,7 +90,7 @@ $(function () {
         $.ajax({
             url: '/api/login',
             method: 'POST',
-            // 这是快速获取表单中的数据
+            // 这是快速获取表单中的数据 serialize() 方法
             data: $(this).serialize(),
             success: function (res) {
                 if (res.status !== 0) {
