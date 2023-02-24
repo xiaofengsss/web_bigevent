@@ -16,6 +16,9 @@ $(function () {
             // 1. 清空本地存储中的 token
             localStorage.removeItem('token');
 
+            // 文章id
+            localStorage.removeItem('idnum');
+
             // 2. 重新跳转到登录页面
             location.href = '/login.html';
 
